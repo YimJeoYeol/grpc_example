@@ -105,3 +105,32 @@ public class GRpcClient {
         }
     }
 }
+
+/*
+* requestObserver.onNext(NestRequest.newBuilder()
+			.setType(RequestType.CONFIG)
+			.setConfig(NestConfig.newBuilder()
+				.setConfig("{\"transcription\":{\"language\":\"ko\"}}")
+				.build())
+			.build());
+
+		java.io.File file = new java.io.File("~/media/42s.wav");
+		byte[] buffer = new byte[32000];
+		int bytesRead;
+		FileInputStream inputStream = new FileInputStream(file);
+		while ((bytesRead = inputStream.read(buffer)) != -1) {
+			requestObserver.onNext(NestRequest.newBuilder()
+				.setType(RequestType.DATA)
+				.setData(NestData.newBuilder()
+					.setChunk(ByteString.copyFrom(buffer, 0, bytesRead))
+					.setExtraContents("{ \"seqId\": 0, \"epFlag\": false}")
+					.build())
+				.build());
+		}
+		requestObserver.onCompleted();
+		latch.await();
+		channel.shutdown();
+	}
+
+}
+* */
