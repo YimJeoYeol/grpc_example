@@ -4,4 +4,5 @@
 
 ** Maven으로 프로젝트이고 IDE는 인텔리제이로 하였습니다. 라이브러리 인식이 안될 경우 MAVEN GRPC => lifecycle => clean => install 해도 안되면 IDE를 종료후 다시 켜야한다
 
-그래도 안되면 아래의 사이트에 들어가서 하면 실행이 된다 https://ottl-seo.tistory.com/44
+그래도 안되면 아래의 사이트에 들어가서 시키는대로하면 실행이 된다 (build.gradle이냐 maven이냐 차이일뿐) 
+https://ottl-seo.tistory.com/44
